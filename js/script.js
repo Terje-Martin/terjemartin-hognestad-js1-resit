@@ -1,4 +1,4 @@
-const postsContainer = document.querySelector(".container_content");
+const jokesContainer = document.querySelector(".container_content");
 const container = document.querySelector(".joke_setup");
 const featured = document.querySelector(".joke_punchline-media");
 
@@ -13,13 +13,13 @@ async function getList() {
 
     console.log("RESULT", results);
 
-    postsContainer.innerHTML = "";
+    jokesContainer.innerHTML = "";
 
     const delivery = results.delivery;
     const category = results.category;
     const joke = results.joke;
 
-    postsContainer.innerHTML += `<div class="container_content">
+    jokesContainer.innerHTML += `<div class="container_content">
                                      <a href="index.html?id=${category}" class="item">
                                               <div>${delivery}</div>
                                               <div class="joke_setup">

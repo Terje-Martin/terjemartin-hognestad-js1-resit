@@ -1,5 +1,15 @@
-const reverseLines = str => str.split(/\r?\n/).reverse().join('\n');
+const pContainer = document.querySelector(".about");
+const reverseButton = document.querySelector(".reverse-button");
 
-reverseLines(`one
-two
-three`);
+reverseButton.addEventListener("click", () => {
+    const pTags = pContainer.children;
+    const newPTags = [...pTags];
+    newPTags.reverse();
+  
+ 
+    pContainer.innerHTML = "";
+
+    newPTags.forEach((pTag) => {
+      pContainer.appendChild(pTag);
+    });
+  });
